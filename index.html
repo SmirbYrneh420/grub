@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    </head>
+    <body>
+        <div class="bg-white dark:bg-slate-950" id="background">
+            <div class="grid grid-cols-5 gap-4 p-4 border-b-4 dark:border-white" id="topbar">
+                <a href="https://example.com" class="text-center dark:text-white">About</a>
+                <a href="https://example.com" class="text-center dark:text-white">Projects</a>
+                <a href="https://example.com" class="text-center dark:text-white">FAQ</a>
+                <a href="mailto:natsuki.ddlc1@outlook.com" class="text-center dark:text-white">Contact</a>
+                <a href="https://github.com/smirbyrneh420" class="text-center dark:text-white">GitHub</a>
+            </div> 
+
+            <div class="container mx-auto text-3xl grid md:grid-cols-2 grid-cols-1 p-4" id="description">
+                <img src="signature.png" alt="Logo placeholder" class="max-h-1/2 max-w-1/2 mx-auto">
+                <div>
+                    <h1 class="font-bold dark:text-white">Hello.</h1>
+                    <p class="text-base dark:text-white">This is a sample website in Tailwind CSS. If this happens to be the skeleton of how my interim personal website will be like, I will update this description.</p>
+                </div>
+            </div>
+
+            <div class="container mx-auto grid md:grid-cols-3 grid-cols-1 gap-4" id="project-grid">
+                <div class="border-5 rounded-md dark:border-white hover:bg-stone-700 group">
+                    <img src="image1.png" alt="Image goes here...">
+                    <a href="https://github.com/SmirbYrneh420/odochina" class="font-bold text-xl dark:text-white">Project 1</a>
+                    <p class="text-base dark:text-white">A Street Fighter clone made in Godot, using custom 8-bit sprites. Coming to a web browser near you.</p>
+                </div>
+                <div class="border-5 rounded-md dark:border-white hover:bg-stone-700 group">
+                    <img src="image1.png" alt="Image goes here..." class="blur-sm">
+                    <a href="https://example.com" class="font-bold text-xl dark:text-white">Project 2</a>
+                    <p class="text-base dark:text-white">A Discord bot that uses xkcd's ROBOT9000 algorithm, hashing all inputs for privacy and performance.</p>
+                </div>
+                <div class="border-5 rounded-md dark:border-white hover:bg-stone-700 group">
+                    <img src="image1.png" alt="Image goes here...">
+                    <h1 class="font-bold text-xl dark:text-white">Project 3</h1>
+                    <p class="text-base dark:text-white">I also sketch as a side hustle. Not really the most confident in my own art, but if you want to take a look, have a look.</p>
+                </div>
+            </div>
+
+            <div class="container mx-auto py-16 dark:text-white">
+                <h1 class="text-3xl font-bold">Frequently Asked Questions</h1>
+                <button class="faq px-5 py-2 bg-stone-700 block rounded-md">Do you plan to share any of your art publicly?</button>
+                <div class="faq-contents hidden px-5 py-2 bg-stone-500">
+                    <p>I may share some of the art that have been publicly endorsed. Check back for updates!</p>
+                </div>
+                <button class="faq px-5 py-2 bg-stone-700 block rounded-md">Do you have a release date for your projects?</button>
+                <div class="faq-contents hidden px-5 py-2 bg-stone-500">
+                    <p>In the short-term, soon(tm). In the longterm, hopefully in 2 to 3 months.</p>
+                </div>
+                <button class="faq px-5 py-2 bg-stone-700 block rounded-md">Test</button>
+                <div class="faq-contents hidden px-5 py-2 bg-stone-500">
+                    <p>This is some sample text. Teto Teto Teto</p>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        // array
+        var accordion = document.getElementsByClassName("faq");
+        var i;
+
+        for (i=0; i < accordion.length; i++) {
+            accordion[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                panel.style.display = panel.style.display === "block" ? panel.style.display = "none" : panel.style.display = "block";
+            });
+        }
+    </script>
+</html>
